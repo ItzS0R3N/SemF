@@ -1,0 +1,136 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Arial Black', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2196f3, #42a5f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+/* Präsentation */
+.presentation {
+    width: 95%;
+    max-width: 1200px;
+    height: 80%;
+    background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+    border: 5px dashed #42a5f5;
+}
+
+/* Folien */
+.slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translate(-50%, -60%) rotate(5deg);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.slide h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #1565c0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slide p {
+    font-size: 1.5rem;
+    color: #333;
+    background: linear-gradient(90deg, #29b6f6, #81d4fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+button {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #42a5f5;
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Button zur Startseite auf der letzen Folie */
+.startpage-button {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #2196f3;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.startpage-button:hover {
+    color: #42a5f5;
+    transform: scale(1.0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.startpage-button:active {
+    background-color: #1e88e5;
+    transform: scale(1);
+}
+
+.slide-image {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide-image:hover {
+    transform: scale(1.05);
+}
